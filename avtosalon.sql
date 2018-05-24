@@ -11,6 +11,27 @@
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 
+
+-- Дамп структуры базы данных avtosalon
+CREATE DATABASE IF NOT EXISTS `avtosalon` /*!40100 DEFAULT CHARACTER SET latin1 */;
+USE `avtosalon`;
+
+-- Дамп структуры для таблица avtosalon.dannue
+CREATE TABLE IF NOT EXISTS `dannue` (
+  `marka` char(50) CHARACTER SET ucs2 COLLATE ucs2_unicode_ci DEFAULT NULL,
+  `model` char(50) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
+  `teh_harakteristiki` char(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
+  `teh_sostoanie` char(50) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
+  `god_vupyska` int(11) DEFAULT NULL,
+  `probeg` int(11) DEFAULT NULL,
+  `price` int(11) DEFAULT NULL,
+  `klient` char(50) DEFAULT NULL,
+  `marka_model` char(50) DEFAULT NULL,
+  `prace_klienta` int(11) DEFAULT NULL,
+  `image` char(50) DEFAULT NULL,
+  `opisanie` char(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
 -- Дамп данных таблицы avtosalon.dannue: ~8 rows (приблизительно)
 /*!40000 ALTER TABLE `dannue` DISABLE KEYS */;
 INSERT IGNORE INTO `dannue` (`marka`, `model`, `teh_harakteristiki`, `teh_sostoanie`, `god_vupyska`, `probeg`, `price`, `klient`, `marka_model`, `prace_klienta`, `image`, `opisanie`) VALUES
